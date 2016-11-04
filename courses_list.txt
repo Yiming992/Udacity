@@ -3,11 +3,18 @@ Front-End Developer Nanodegree
 	Introduction to Web Development
 		https://www.udacity.com/course/intro-to-html-and-css--ud304
 	JavaScript Basics
-		https://de.udacity.com/course/javascript-basics--ud804
+		https://www.udacity.com/course/javascript-basics--ud804
 	Object-Oriented Javascript & HTML5 Canvas
+		https://www.udacity.com/course/object-oriented-javascript--ud015
+		https://www.udacity.com/course/html5-canvas--ud292
 	Browser Rendering and Web Performance Optimization
+		https://www.udacity.com/course/browser-rendering-optimization--ud860
+		https://www.udacity.com/course/website-performance-optimization--ud884
 	Intro to AJAX & JavaScript Design Patterns
+		https://www.udacity.com/course/intro-to-ajax--ud110
+		https://www.udacity.com/course/javascript-design-patterns--ud989
 	JavaScript Testing
+		https://www.udacity.com/course/javascript-testing--ud549
 
 Full Stack Web Development Nanodegree
 	Project: Movie Trailer Website
@@ -22,6 +29,8 @@ Full Stack Web Development Nanodegree
 		Responsive Images
 			https://www.udacity.com/course/responsive-images--ud882
 
+		Intro to AJAX
+			https://www.udacity.com/course/intro-to-ajax--ud110
+
 Web Development
 	https://www.udacity.com/course/web-development--cs253
-	
