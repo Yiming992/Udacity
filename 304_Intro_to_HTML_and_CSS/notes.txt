@@ -1,0 +1,147 @@
+1. HTML, CSS, and Boxes.
+
+HTML elements are always rectangular.
+
+HTML-CSS-DOM
+	HTML - HyperText Markup Language - the standard markup language used to create web pages.
+
+	CSS - Cascading Style Sheets - style sheet language used for describing the look and formatting of a document written in a markup language.
+
+	DOM - Document Object Model - a cross-platform and language-independent convention for representing and interacting with objects in HTML (and other markup languages). The nodes of every document are organized in a tree structure, called the DOM tree.
+
+CSS border-radius
+	w/o the element will be a square
+
+Tag
+	HTML 
+		<tag attribute=value></tag>
+
+		link tag coding
+			<link rel="stylesheet" href="style.css">
+				Udacity Developer Style Guide recommends ommiting 
+					type="text/css"
+				from the tag
+
+		<head> tag
+			add link to style file.
+			must contain <title>TITLE</title> to pass validation.
+	CSS
+		.class{
+			attribute:value;
+		}
+
+		#id{
+			attribute:value;
+		}
+
+	semantic tags
+		content sectioning
+			https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning
+		HTML5 outline algorithm
+			https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#The_HTML5_Outline_Algorithm
+
+Understanding CSS
+	Order Matters
+		It also matters where you define the rules and in what order they are applied. Styles can be defined in different places and are applied in the following order, with definitions further down the list overwriting previous definitions:
+
+		- the default style of a browser (different browsers have slightly different styles)
+		- stylesheet in a separate file (this is what you will be mostly using)
+		- stylesheet inside HTML (this can be done for small projects but is not ideal)
+		- inline style in an element (this can also be done but should be avoided)
+	Specifics Matter
+		"Cascading" means that rules are applied not only to the elements they directly match, but also to all of those elements' child elements. However, if a child element has multiple, overlapping rules defined for it, the more specific rule takes effect.
+
+CSS styles
+	MDN CSS Reference -- attribute:value list
+		https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+	How CSS selector works
+		https://css-tricks.com/how-css-selectors-work/
+	Default style rules for common broswers:
+		WebKit (Chrome and Safari)
+			http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css
+		Firefox
+			https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+		IE
+			http://www.iecss.com/
+	CSS reset to keep consistency across browsers
+		http://necolas.github.io/normalize.css/
+
+CSS common attributes:value pairs
+	font-style:normal/italic/oblique;
+	font-weight:bold;
+
+The Box Model
+	inside -> outside
+		content]padding]border]margin]
+			padding: affected by the background color of the box.
+			border: inherit from the color property of the box.
+			margin: don't have background color and is completely transparent.
+
+	Demo page
+		http://assignments.udacity-extras.appspot.com/courses/html-css/samples/box-model.html
+	CSS trick: border-box, set up box size excluding margin
+		add this code in style.css
+			* {
+			    -webkit-box-sizing: border-box;
+			    -moz-box-sizing: border-box;
+			    -ms-box-sizing: border-box;
+			    box-sizing: border-box;
+			} 
+	setting box in percentage instead of pixels
+		.description{
+			width:50%;
+		}
+	setting box the max-width
+		.description{
+			max-width:460px;
+		}
+
+CSS positioning -- Flex Box layout
+	Flex box: flexible box that layout, align and distribute space among items in a container or div. 
+	Usage
+		change the display attribute of parent container & Give child items size smaller than 100%.
+			HTML
+				<div class="app" style="display:flex;">
+			CSS
+				.app{
+					display: -webkit-flex; #TO SUPPORT Safari.
+					display:flex;
+					flex-direction:row/row-reverse/column/column-reverse;
+				}
+
+				.description{
+					width:50%; /*50% of app*/
+				}
+	Complete Guide to Flex
+		http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+	To center element:
+		.class{
+			margin: DIGIT(px/em) auto;
+		}
+	To align text
+		h1{
+			text-align:center;
+		}
+
+Image
+	<img src="/.../img.png" alt="INCASE BROWSER CANNOT DISPLAY IMAGE/ ACCESSIBILITY">
+
+Code, Test, and Refine
+	1. Get the structure of the page right -- Boxify page.
+		size, position of box.
+	2. Tags: repeated styles & semantic elements.
+	3. Write HTML.
+	4. Apply styles (from Biggest site-wise element to smallest-like widgets). 
+	5. Fix things. 
+
+Verifying 
+	HTML
+		http://validator.w3.org/#validate_by_input
+	CSS
+		http://jigsaw.w3.org/css-validator/#validate_by_input
+
+2. CSS Frameworks, Responsive Layouts.
+
+
+
