@@ -34,3 +34,9 @@ Full Stack Web Development Nanodegree
 
 Web Development
 	https://www.udacity.com/course/web-development--cs253
+Responsive Web Design Fundamentals
+	https://www.udacity.com/course/responsive-web-design-fundamentals--ud893
+Responsive Image
+	https://www.udacity.com/course/responsive-images--ud882
+
+

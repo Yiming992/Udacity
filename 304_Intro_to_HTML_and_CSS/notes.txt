@@ -63,8 +63,12 @@ CSS styles
 			https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 		IE
 			http://www.iecss.com/
-	CSS reset to keep consistency across browsers
+	CSS Resetting/Normalizing to keep consistency across browsers
 		http://necolas.github.io/normalize.css/
+		HTML
+			<head>
+				<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+			</head>
 
 CSS common attributes:value pairs
 	font-style:normal/italic/oblique;
@@ -115,9 +119,9 @@ CSS positioning -- Flex Box layout
 	Complete Guide to Flex
 		http://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-	To center element:
+	To center element horizontally:
 		.class{
-			margin: DIGIT(px/em) auto;
+			margin: 0 auto;
 		}
 	To align text
 		h1{
@@ -125,7 +129,9 @@ CSS positioning -- Flex Box layout
 		}
 
 Image
+	ALWAYS fill in the "alt" attributes
 	<img src="/.../img.png" alt="INCASE BROWSER CANNOT DISPLAY IMAGE/ ACCESSIBILITY">
+
 
 Code, Test, and Refine
 	1. Get the structure of the page right -- Boxify page.
@@ -141,7 +147,177 @@ Verifying
 	CSS
 		http://jigsaw.w3.org/css-validator/#validate_by_input
 
+CSS tricks for debugging
+	Add the following codes in CSS files to look at boxes clearly.
+		* {
+		    border: 1px solid red !important;
+		}
+
+		* {
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+		}
+
 2. CSS Frameworks, Responsive Layouts.
+CSS frameworks
+	Def: CSS frameworks are pre-prepared software frameworks that are meant to allow for easier, more standards-compliant web design using the Cascading Style Sheets language. Most of these frameworks contain at least a grid. 	/Collections of CSS classes that make page layout easy to implement. 
+
+Responsive webpages
+	Dft devices -> dft resolutions of screen in pixels (not device's fixed size).
+	Responsive design: website isn't fixed with single size. page will resize to fit. 
+	Desktop screen
+		common practice: set max-width to be 960px. Not 1024px to leave room on the side of the screen for scroll bars. For larger screen of 1920px/1440px, simple center the 960px wide content to make sure it still looks good.
+	Tablets & phones
+		two orientations; use thumbs not mouse [adaptive design: change layout further to adapt to use].
+
+	Use percentage size instead of fixed size to define column width.
+
+	Media queries
+		change css properties depending on device, screen size, and color.
+		code
+			@media only screen/print and () {}
+
+
+Grid system
+	Create 12 columns.
+		CSS classess to create 
+		1) .row of 100% page width
+			NAMING: .row
+		2) .column of 1/12 - 2/12 page width
+			1/12 = 8.33%, 2/12=16.66%, ...
+			NAMING: col-1, col-2, ..., col-12
+
+	Create a class "grid" for an outer div to contain all other grid divs
+		Purpose: to limit the max-width of the page and center content in case user is looking at the page on a very large screen.
+		To align columns next to each other when their width is fixed
+
+	To display them next to each other, add this line in CSS code
+		.row{display:flex; flex-wrap:wrap;}
+
+		Flex
+			https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+		Flex-wrap
+			https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+
+	Negative space
+		.col-4{padding: inside the element
+		margin: outside the element}
+
+	Overflow
+		.class{overflow:auto;}
+
+	Grid Template
+		see "Udacity/304_Intro_to_HTML_and_CSS/portfolio/framework/"
+			html: "grid_template.html"
+			css: "/css/main.css"
+
+Font
+	google fonts: https://fonts.google.com/
+Placehold images
+	src="http://placehold.it/555x300"
+	http://placekitten.com/
+
+
+Front-end frameworks to choose
+	Bootstrap: http://getbootstrap.com/ 
+	Foundation: http://foundation.zurb.com/ 
+	Yaml: http://www.yaml.de/ 
+	960 Grid: http://960.gs/ 
+	Susy: http://susy.oddbird.net/ 
+
+
+Bootstrap
+	Bootstrap CSS Documentation: http://getbootstrap.com/css/
+	Usage
+		1) copy the css and js folders to project folder.
+		2) include the head element in files:
+			<link rel="stylesheet" href="css/bootstrap.min.css">
+			<script src="js/bootstrap.min.css"></script>
+		3) also add this meta tag in head
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		4) Put everything (rows) in a container 
+			.container (fixed-width) or .container-fluid (full-width) for proper alignment and padding.
+
+			<div class="container"/"container-fluid">
+				<div class="row">
+					<div class="col-md-6"></div>
+					<div class="col-md-6"></div>
+				</div>
+			</div>
+
+		Use rows to create horizontal groups of columns.
+		content should be placed within columns, and only columns may be immediate children of rows.
+
+	Images
+		Responsive Image to help avoid overflow
+			<img src="..." class="img-responsive" alt="Responsive Image">
+
+			To center the image using the .img-responsive class, use .center-block instead of .text-center.
+
+	Typography
+		right-align text: .text-right
+		uppdercase: text-uppercase		
+
+
+	Responsive design
+
+
+	Minifed CSS files
+		same content as the normal CSS file but takes whitespace out. Will make the size smaller, but less human-readable as the normal version.
+		
+		manually minify CSS
+			http://cssminifier.com/
+		automatic minify 
+			code editor plugin
+			a build system Gruntjs: http://gruntjs.com/
+
+	Customization
+		add own style sheet in the head
+
+	JavaScript
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	
+		Add JQuery & JS to head
+		    <script src="js/jquery-3.1.1.min.js"></script>
+	   		<script src="js/bootstrap.min.js"></script>
+
+Nanodegree style guide
+	https://udacity.github.io/frontend-nanodegree-styleguide
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
